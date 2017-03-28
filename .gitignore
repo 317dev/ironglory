@@ -15,6 +15,3 @@
 
 # Ignore Byebug command history file.
 .byebug_history
-
-
-/lib/seeds/iron_glory_inventory.csv
