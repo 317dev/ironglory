@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import { browserHistory, Router, Route, IndexRoute } from 'react-router';
 
 import App from './components/App'
@@ -20,3 +21,4 @@ ReactDOM.render (
    </Router>
    , document.getElementById('root')
 )
+

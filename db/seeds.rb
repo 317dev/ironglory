@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'iron_glory_inventory.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+  p = Patch.new
+  p.name = row['Product']
+  p.description = row['Description']
+  p.sku = row['SKU']
+  p.price = row['Price']
+  p.quantity = row['Available'].gsub(/\D/, "")
+  p.year = Year.find_or_create_by!(year: row['Year'])
+  p.category = Category.find_or_create_by!(name: row['Category'])
+  p.save!
+end
