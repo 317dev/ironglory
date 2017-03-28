@@ -25,7 +25,9 @@ class Layout extends Component {
         </div>
     </header>
     <main>
-        <div className="container"></div>
+        <div className="container">
+          {/*{props.children}*/}
+        </div>
         <br/>
         <br/>
     </main>
