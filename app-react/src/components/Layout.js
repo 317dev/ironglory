@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class Nav extends Component {
+class Layout extends Component {
   render() {
     return (
-      <h1>Hello Nav</h1>
+      <h1>Hello Layout</h1>
     );
   }
 }
 
-export default Nav;
+export default Layout;
