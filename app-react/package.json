@@ -6,7 +6,11 @@
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+<<<<<<< HEAD
     "react-router": "^4.0.0"
+=======
+    "react-router": "^3.0.0"
+>>>>>>> 80474c07f7bed8333116f259bd36c50bb28015c6
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

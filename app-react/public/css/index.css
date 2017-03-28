@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
+=======
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+
+>>>>>>> 80474c07f7bed8333116f259bd36c50bb28015c6
