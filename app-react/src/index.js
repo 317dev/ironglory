@@ -9,7 +9,6 @@ import Categories from './components/Categories'
 import Checkout from './components/Checkout'
 import Homepage from './components/Homepage'
 
-
 ReactDOM.render (
 
    <Router history={browserHistory}>
