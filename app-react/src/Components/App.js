@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react'
+import { Link } from 'react-router'
 
-class App extends Component {
-  render() {
-    return (
-      <h1>Hello World</h1>
-    );
-  }
+class App extends React.Component {
+   constructor(props) {
+       super(props)
+       this.state = {}
+   }
+
+   render() {
+       return <div>{this.props.children}</div>
+   }
 }
 
-export default App;
+export default App
