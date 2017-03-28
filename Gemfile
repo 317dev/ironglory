@@ -42,6 +42,7 @@ gem 'kaminari'
 gem 'api-pagination'
 gem 'pg_search'
 gem 'ransack'
+gem 'rails_admin', '~> 1.1.1'
 
 gem 'carrierwave', '~> 1.0'
 gem 'figaro'
