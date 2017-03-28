@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { browserHistory, Router, Route, IndexRoute } from 'react-router';
 
 import App from './components/App'
@@ -10,7 +9,6 @@ import Checkout from './components/Checkout'
 import Homepage from './components/Homepage'
 
 ReactDOM.render (
-
    <Router history={browserHistory}>
        <Route path="/" component={App} >
            <IndexRoute component={Homepage} />
@@ -21,4 +19,3 @@ ReactDOM.render (
    </Router>
    , document.getElementById('root')
 )
-
