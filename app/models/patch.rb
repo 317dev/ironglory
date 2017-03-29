@@ -4,4 +4,6 @@ class Patch < ApplicationRecord
   belongs_to :category
   has_many :orderings
   has_many :orders, through: :orderings
+
+  mount_uploader :image, ImageUploader
 end
