@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328191734) do
+ActiveRecord::Schema.define(version: 20170329002958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20170328191734) do
     t.boolean  "featured",        default: false
     t.integer  "quantity"
     t.boolean  "limited_edition"
+    t.string   "photo"
     t.index ["category_id"], name: "index_patches_on_category_id", using: :btree
     t.index ["year_id"], name: "index_patches_on_year_id", using: :btree
   end
