@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
   has_many :orders
+  has_many :addresses, as: :addressings
 
   has_secure_password
   has_secure_token

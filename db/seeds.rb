@@ -22,3 +22,5 @@ csv.each do |row|
   p.image = Rails.root.join("public/img/#{p.sku.downcase}.png").open
   p.save!
 end
+
+User.create!(first_name: "admin1", last_name: "admin1", username: "admin", password: "cupcakes", email: "example@example.org", admin: true)
