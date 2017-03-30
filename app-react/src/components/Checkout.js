@@ -6,9 +6,9 @@ class Checkout extends React.Component {
     }
     
     render() {
-        let cart = this.props.cart.map((product, key) => <div className="card" key={key}>
-            <div className="card-content">
-                <span className="tag is-success">{product.quantity}</span> <strong>{product.name}</strong>
+        let cart = this.props.cart.map((product, key) => <div className="thumbnail" key={key}>
+            <div className="caption">
+                <span className="label label-success">{product.quantity}</span> <strong>{product.name}</strong>
             </div>
         </div>)
 
