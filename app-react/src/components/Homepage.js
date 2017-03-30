@@ -1,14 +1,11 @@
 import React from 'react'
 import { browserHistory } from 'react-router'
-import Layout from './Layout'
-import './Homepage.css' 
 
+import './Homepage.css'
 
 class Homepage extends React.Component {
-
     // componentWillMount() {
     //     this.props.getCategories()
-    // }
 
   render() {
     return <div>

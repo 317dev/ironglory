@@ -1,6 +1,7 @@
 body{
     margin: 0;
 }
+
 .background {
     background: linear-gradient(rgba(47,117,179,0.75), rgba(47,117,179,0.75)), url(../img/iron-glory-background.jpg);
     background-size: cover;
@@ -14,4 +15,5 @@ body{
 
 img {
     width: 100%;
+
 }

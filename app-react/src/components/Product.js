@@ -1,4 +1,5 @@
 import React from 'react'
+import './Product.css'
 
 class Product extends React.Component {
     // componentWillMount() {
