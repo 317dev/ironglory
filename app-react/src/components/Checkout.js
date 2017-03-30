@@ -2,20 +2,20 @@ import React from 'react'
 import './Checkout.css'
 
 class Checkout extends React.Component {
-    componentWillMount() {
-        this.props.getCart()
-    }
+    // componentWillMount() {
+    //     this.props.getCart()
+    // }
     
     render() {
-        let cart = this.props.cart.map((product, key) => <div className="thumbnail" key={key}>
-            <div className="caption">
-                <span className="label label-success">{product.quantity}</span> <strong>{product.name}</strong>
-            </div>
-        </div>)
+        // let cart = this.props.cart.map((product, key) => <div className="thumbnail" key={key}>
+        //     div className="caption">
+        //         <span className="label label-success">{product.quantity}</span> <strong>{product.name}</strong>
+        //     </div>
+        // </div>)
 
-        if (cart.length === 0) {
-            cart = <p>There are no items in your cart. <a href="/">Return to the home page.</a></p>
-        }
+        // if (cart.length === 0) {
+        //     cart = <p>There are no items in your cart. <a href="/">Return to the home page.</a></p>
+        // }
 
     return <div>
             <div className="row">

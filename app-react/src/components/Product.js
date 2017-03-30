@@ -2,9 +2,9 @@ import React from 'react'
 import './Product.css'
 
 class Product extends React.Component {
-    componentWillMount() {
-        this.props.getProduct(this.props.params.productId)
-    }
+    // componentWillMount() {
+    //     this.props.getProduct(this.props.params.productId)
+    // }
   render() {
 
     return <div>

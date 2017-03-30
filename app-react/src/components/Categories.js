@@ -3,9 +3,9 @@ import { browserHistory } from 'react-router'
 
 class Categories extends React.Component {
     // Get products
-    componentWillMount() {
-        this.props.getProducts()
-    }
+    // componentWillMount() {
+    //     this.props.getProducts()
+    // }
 
   render() {
     return (
