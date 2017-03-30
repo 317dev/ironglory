@@ -79,8 +79,6 @@ class Layout extends React.Component {
         this.state.cart.forEach(product => fetch('/api/cart/' + product.id, {
             method: 'DELETE'
         }))
-
-        browserHistory.push('/thankyou')
     }
 
  render() {
@@ -101,7 +99,7 @@ class Layout extends React.Component {
         })
 
         // If we have a message state value, show it on the screen
-        let message = this.state.message ? <p className="notification is-success">{this.state.message}</p> : ''
+        let message = this.state.message ? <p className="alert alert-success">{this.state.message}</p> : ''
 
         // Clear the message after 2 seconds
         if (message) {
@@ -109,12 +107,9 @@ class Layout extends React.Component {
         }
 
         // Show a My Cart button if we're not on the checkout page, otherwise show a Checkout button
-        let checkoutButton = location.pathname === '/checkout' ? <a className="button is-success is-outlined is-pulled-right" onClick={this.checkout}>Checkout</a> : <a className="button is-success is-outlined is-pulled-right" onClick={() => browserHistory.push('/checkout')}>My Cart</a>
+        let checkoutButton = location.pathname === '/checkout' ? <a className="btn btn-success" onClick={this.checkout}>Checkout</a> : <a className="btn btn-success" onClick={() => browserHistory.push('/checkout')}>My Cart</a>
 
-        // If we're on the Thank You page, do not show a button
-        if (location.pathname === '/thankyou') {
-            checkoutButton = ''
-        }
+
 
     return <div>
     <header>
@@ -132,12 +127,7 @@ class Layout extends React.Component {
                         // <button type="button" className="btn btn-success" onClick={() => browserHistory.push('/checkout')}>Checkout</button>
                     </div>
 
-                    <filterandsearch filterProducts={this.filterProducts} />
-                   
-
-
-
-
+                    <filterAndSearch filterProducts={this.filterProducts} />
 
                     <div className="col-sm-6 pull-right text-right">
                         <ul className="list-inline">

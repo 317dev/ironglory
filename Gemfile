@@ -34,6 +34,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'rack-cors'
 
 gem 'rack-cors'
 gem 'active_model_serializers', '~> 0.10.0'
@@ -43,6 +44,7 @@ gem 'api-pagination'
 gem 'pg_search'
 gem 'ransack'
 gem 'rails_admin', '~> 1.1.1'
+gem 'stripe'
 
 gem 'carrierwave', '~> 1.0'
 gem 'figaro'

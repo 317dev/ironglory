@@ -19,5 +19,6 @@ csv.each do |row|
   p.quantity = row['Available'].gsub(/\D/, "")
   p.year = Year.find_or_create_by!(year: row['Year'])
   p.category = Category.find_or_create_by!(name: row['Category'])
+  p.image = Rails.root.join("public/img/#{p.sku.downcase}.png").open
   p.save!
 end
