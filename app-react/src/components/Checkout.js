@@ -2,7 +2,26 @@ import React, { Component } from 'react';
 //import style from '../css/checkout.css'
 
 class Checkout extends Component {
+     constructor(props)
+     super(props)
+
+     this.state = {
+         cart: []
+     }
+}
+
+componentWillMount() {
+    // fetch
+}
+
+
+
   render() {
+      let cartItems = this.state.cart.map(function(product, key) {
+          return <p key={key></p>
+
+            //   CART STUFF ABOVE!
+      })
     return <div>
             <div className="row">
             <div className="col-sm-7" id="checkoutForm">
