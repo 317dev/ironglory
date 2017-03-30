@@ -1,7 +1,7 @@
 import React from 'react'
 import { browserHistory } from 'react-router'
 
-class Home extends React.Component {
+class Homepage extends React.Component {
     componentWillMount() {
         this.props.getCategories()
     }
