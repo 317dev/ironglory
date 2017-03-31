@@ -8,6 +8,8 @@ import Categories from './components/Categories'
 import Checkout from './components/Checkout'
 import Homepage from './components/Homepage'
 
+//global config
+window.apiHost = 'heroku'
 
 ReactDOM.render (
    <Router history={browserHistory}>
@@ -18,5 +20,6 @@ ReactDOM.render (
            <Route path='patches' component={Categories} />
        </Route>
    </Router>,
+
    document.getElementById('root')
 )

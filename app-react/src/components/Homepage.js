@@ -35,9 +35,13 @@ class Homepage extends React.Component {
     return <div>
        <div className="row background">
             <div className="">
-                {/*<img src="./iron-glory-logo-inverted.png"/>*/}
-                {Products}
+                <img src="/img/iron-glory-logo-inverted.png"/>
+                
             </div>
+        </div>
+        <br/>
+        <div className="row">
+            {Products}
         </div>
     </div>
   }

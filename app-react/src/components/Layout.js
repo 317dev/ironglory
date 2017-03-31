@@ -10,6 +10,7 @@ class Layout extends React.Component {
         // this.getCategories = this.getCategories.bind(this)
         this.getProducts = this.getProducts.bind(this)
         this.getProduct = this.getProduct.bind(this)
+        this.cart = this.cart.bind(this)
         // this.filterProducts = this.filterProducts.bind(this)
         // this.getCart = this.getCart.bind(this)
         // this.addToCart = this.addToCart.bind(this)
@@ -49,38 +50,11 @@ class Layout extends React.Component {
         this.setState({products: products})
     }
 
-    // getCart() {
-    //     fetch('/api/cart')
-    //     .then(res => res.json())
-    //     .then(res => this.setState({cart: res}))
-    // }
+    cart() {
+        browserHistory.push('/checkout')
+    }
 
-    // addToCart(productId, name, qty) {
-    //     fetch('/api/cart', {
-    //         method: 'POST',
-    //         headers: { 'Content-Type': 'application/json' },
-    //         body: JSON.stringify({
-    //             product_id: productId,
-    //             name: name,
-    //             quantity: qty
-    //         })
-    //     })
-    //     .then(res => res.json())
-    //     .then(res => {
-    //         let cart = this.state.cart
-    //         cart.push(res)
 
-    //         this.setState({cart: cart, message: 'Product added to cart successfully.'})
-
-    //         browserHistory.push('/')
-    //     })
-    // }
-
-    // checkout() {
-    //     this.state.cart.forEach(product => fetch('/api/cart/' + product.id, {
-    //         method: 'DELETE'
-    //     }))
-    // }
 
  render() {
 
@@ -89,31 +63,23 @@ class Layout extends React.Component {
             // getCategories: this.getCategories,
             getProducts: this.getProducts,
             getProduct: this.getProduct,
+
             // filterProducts: this.filterProducts,
             // getCart: this.getCart,
             // addToCart: this.addToCart,
             // checkout: this.checkout,
         })
 
-        // let message = this.state.message ? <p className="alert alert-success">{this.state.message}</p> : ''
-
-        // if (message) {
-        //     setTimeout(() => this.setState({message: ''}), 2000)
-        // }
-
-        // // Show a My Cart button if we're not on the checkout page, otherwise show a Checkout button
-        // let checkoutButton = location.pathname === '/checkout' ? <a className="btn btn-success" onClick={this.checkout}>Checkout</a> : <a className="btn btn-success" onClick={() => browserHistory.push('/checkout')}>My Cart</a>
-
     return <div>
     <header>
         <div className="container-fluid">
             <div className="row">
                 <div className="navbar">
-                    <div className="col-sm-6">
+                    <div className="col-sm-3">
                         <ul className="list-inline">
-                            <li>thing 1</li>
-                            <li>thing 2</li>
-                            <li>thing 3</li>
+                            <li><a href="/">All Patches</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Categories</a></li>
                         </ul>
                         {/*<a onClick={() => browserHistory.push('/checkout')}>Checkout </a>
                         <Link to="/checkout">checkout</Link>
@@ -122,10 +88,16 @@ class Layout extends React.Component {
 
                     {/*<filterAndSearch filterProducts={this.filterProducts} />*/}
 
-                    <div className="col-sm-6 pull-right text-right">
+                    <div className="col-sm-9 pull-right text-right">
                         <ul className="list-inline">
+                            <li>
+                                <div className="form-group form-inline">
+                                    <input type="text" className="form-control" id="search" />
+                                    <button type="button" className="btn btn-default" id="searchButton">Search</button>
+                                </div>
+                            </li>
                             <li>login</li>
-                            <li className="glyphicon glyphicon-shopping-cart"></li>
+                            <li className="glyphicon glyphicon-shopping-cart" onClick={this.cart}></li>
                         </ul>
                     </div>
                 </div>
@@ -152,7 +124,7 @@ class Layout extends React.Component {
                     </div>
 
                     <div className="col-sm-4">
-                    <img src="../img/iron-glory-logo-inverted.png" />
+                    <img src="/img/iron-glory-logo-inverted.png" />
                     </div>
 
                     <div className="col-sm-4"> </div>                

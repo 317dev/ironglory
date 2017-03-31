@@ -16,12 +16,16 @@
      color: white;
  }
 
-
-
  .glyphicon {
      color: white; 
  }
 
  img {
      width: 100%
+ }
+
+#searchButton {
+     background: goldenrod;
+     border: none;
+     margin-left: 5px;
  }
