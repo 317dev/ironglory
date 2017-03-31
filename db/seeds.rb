@@ -22,3 +22,10 @@ csv.each do |row|
   p.image = Rails.root.join("public/img/#{p.sku.downcase}.png").open
   p.save!
 end
+
+User.create!(first_name: "admin1", last_name: "admin1", username: "admin", password: "cupcakes", email: "example@example.org", admin: true)
+
+5.times do
+  order = Order.create!
+  order.patches = Patch.all.sample(3)
+end
