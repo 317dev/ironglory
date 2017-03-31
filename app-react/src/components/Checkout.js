@@ -14,7 +14,7 @@ class Checkout extends React.Component {
 
     return <div>
             <div className="row">
-            <div className="col-sm-7" id="checkoutForm">
+            <div  id="checkoutForm">
                 <h1>Iron Glory</h1> <br />
                 <div>
                     <h3>Customer Information</h3>
@@ -83,19 +83,9 @@ class Checkout extends React.Component {
                 <br />
                 <br/>
 
-                <div className="row">
-                    <div className="col-sm-6">
-                        <a href="">Return to cart</a>
-                    </div>
-                    <div className="col-sm-6 pull-right">
+                <div className="row text-center">
                         <button type="button" className="btn btn-success btn-lg">Place Order</button>
-                    </div>
-
-
-            </div>
-            <div className="col-sm-5 cart">
-          
-            </div>
+                </div>
 
         </div>
     </div>
