@@ -10,6 +10,7 @@ class Homepage extends React.Component {
     //     this.props.getCategories()
     // }
 
+
   render() {
     return <div>
        <div class="row background">
