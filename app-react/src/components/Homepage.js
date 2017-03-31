@@ -1,7 +1,9 @@
 import React from 'react'
 import { browserHistory } from 'react-router'
-
 import './Homepage.css'
+import Product from './Product.js'
+
+
 
 class Homepage extends React.Component {
     // componentWillMount() {
@@ -9,9 +11,10 @@ class Homepage extends React.Component {
 
   render() {
     return <div>
-       <div class="row background">
-            <div class="">
-                 <img src="./img/iron-glory-logo-inverted.png"/>
+       <div className="row background">
+            <div className="">
+                {/*<img src="./iron-glory-logo-inverted.png"/>*/}
+                <Product />
             </div>
         </div>
     </div>
@@ -19,3 +22,4 @@ class Homepage extends React.Component {
 }
 
 export default Homepage;
+

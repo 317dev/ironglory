@@ -3,7 +3,7 @@ import './Product.css'
 
 class Product extends React.Component {
     // componentWillMount() {
-    //     this.props.getProduct(this.props.params.productId)
+    //     this.props.getPatches(this.props.params.id)
     // }
   render() {
 
@@ -13,7 +13,7 @@ class Product extends React.Component {
         <div className="thumbnail">
           <img src="https://unsplash.it/200/?blur" alt="{this.props.description}" />
           <div className="caption">
-            <h3>{this.props.title}</h3>
+            <h3>{this.props.name}</h3>
             <div className="row">
                 <div className="col-sm-6">
                     <p>{this.props.quantity}</p>
