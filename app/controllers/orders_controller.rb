@@ -1,22 +1,40 @@
 class OrdersController < ApplicationController
 
-  before_action :require_user
-
   def index
-    if current_user.orders.any?
-      @orders = current_user.orders
-      render json: @orders
+    if current_user
+      if current_user.orders.any?
+        @orders = current_user.orders
+        render json: @orders
+      else
+        render json: ["You have no orders"]
+      end
     else
-      render json: ["You have no orders"]
+      @orders = Order.all
+      render json: @orders
     end
   end
 
   def show
-    if current_user.orders.any?
-      @order = current_user.orders.find(params[:id])
-      render json: @order
+    if current_user
+      if current_user.orders.any?
+        @order = current_user.orders.find_by(token: params[:token])
+        render json: @order
+      else
+        render json: ["This order does not exist"]
+      end
     else
-      render json: ["This order does not exist"]
+      @order = Order.find_by(token: params[:token])
+      render json: @order
     end
   end
+
+  def destroy
+    if current_user
+      @order = current_user.orders.find_by(token: params[:token])
+    else
+      @order = Order.find_by(token: params[:token])
+    end
+    @order.destroy
+  end
+
 end
