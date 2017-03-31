@@ -1,5 +1,6 @@
 import React from 'react'
 import { browserHistory } from 'react-router'
+import Layout from './Layout'
 import './Homepage.css'
 import Product from './Product.js'
 

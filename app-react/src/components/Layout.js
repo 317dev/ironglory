@@ -6,16 +6,16 @@ class Layout extends React.Component {
     constructor(props) {
         super(props)
 
-    //     // Custom methods
-    //     this.getCategories = this.getCategories.bind(this)
-    //     this.getProducts = this.getProducts.bind(this)
-    //     this.getProduct = this.getProduct.bind(this)
-    //     this.filterProducts = this.filterProducts.bind(this)
-    //     this.getCart = this.getCart.bind(this)
-    //     this.addToCart = this.addToCart.bind(this)
-    //     this.checkout = this.checkout.bind(this)
+        // Custom methods
+        // this.getCategories = this.getCategories.bind(this)
+        this.getProducts = this.getProducts.bind(this)
+        this.getProduct = this.getProduct.bind(this)
+        // this.filterProducts = this.filterProducts.bind(this)
+        // this.getCart = this.getCart.bind(this)
+        // this.addToCart = this.addToCart.bind(this)
+        // this.checkout = this.checkout.bind(this)
 
-        // Master state
+    //     Master state
     //     this.state = {
     //         categories: [],
     //         originalProducts: [],
@@ -32,22 +32,22 @@ class Layout extends React.Component {
     //     .then(res => this.setState({categories: res}))
     // }
 
-    // getProducts() {
-    //     fetch('/api/products')
-    //     .then(res => res.json())
-    //     .then(res => this.setState({products: res, originalProducts: res}))
-    // }
+    getProducts() {
+        fetch('/api/products')
+        .then(res => res.json())
+        .then(res => this.setState({products: res, originalProducts: res}))
+    }
 
-    // getProduct(id) {
-    //     fetch('/api/products/' + id)
-    //     .then(res => res.json())
-    //     .then(res => this.setState({product: res}))
-    // }
+    getProduct(id) {
+        fetch('/api/products/' + id)
+        .then(res => res.json())
+        .then(res => this.setState({product: res}))
+    }
 
-    // filterProducts(filter) {
-    //     let products = this.state.originalProducts.filter(product => product.name.toLowerCase().includes(filter))
-    //     this.setState({products: products})
-    // }
+    filterProducts(filter) {
+        let products = this.state.originalProducts.filter(product => product.name.toLowerCase().includes(filter))
+        this.setState({products: products})
+    }
 
     // getCart() {
     //     fetch('/api/cart')
@@ -84,16 +84,16 @@ class Layout extends React.Component {
 
  render() {
 
-        // const routeComponent = React.cloneElement(this.props.children, {
-        //     ...this.state,
-        //     getCategories: this.getCategories,
-        //     getProducts: this.getProducts,
-        //     getProduct: this.getProduct,
-        //     filterProducts: this.filterProducts,
-        //     getCart: this.getCart,
-        //     addToCart: this.addToCart,
-        //     checkout: this.checkout,
-        // })
+        const routeComponent = React.cloneElement(this.props.children, {
+            // ...this.state,
+            // getCategories: this.getCategories,
+            getProducts: this.getProducts,
+            getProduct: this.getProduct,
+            // filterProducts: this.filterProducts,
+            // getCart: this.getCart,
+            // addToCart: this.addToCart,
+            // checkout: this.checkout,
+        })
 
         // let message = this.state.message ? <p className="alert alert-success">{this.state.message}</p> : ''
 
