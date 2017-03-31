@@ -1,5 +1,7 @@
 # README
 
+Run rails db:seed to seed your database! This will take a while as it is uploading the patch photos to cloudinary.
+
 
 USERS ROUTES
 
