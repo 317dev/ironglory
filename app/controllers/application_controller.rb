@@ -14,4 +14,7 @@ class ApplicationController < ActionController::Base
      render json: ["You need to be logged in to do this."], status: 401
    end
   end
+
+  def current_order
+  end
 end

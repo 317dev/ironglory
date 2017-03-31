@@ -19,4 +19,9 @@ class OrdersController < ApplicationController
       render json: ["This order does not exist"]
     end
   end
+
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+  end
 end

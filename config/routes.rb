@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   scope :api do
     resources :patches
     resources :users do
-      resources :orders
+      resources :orders do
+        resources :orderings
+      end
     end
     post '/login' => 'sessions#create'
   end
