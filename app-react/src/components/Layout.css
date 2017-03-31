@@ -1,8 +1,8 @@
 .navbar {
-    background: silver;
+    background: gray;
     border-radius: 0;
     color: white;
-    padding: 10px; 
+    padding-top: 20px; 
 }
 
 .footer {
@@ -14,10 +14,25 @@
 }
  a {
      color: white;
+     font-size: 20px;
+     padding-right: 10px;
+ }
+
+ a:hover,
+ a:active {
+     color: goldenrod;
+     text-decoration: none;
  }
 
  .glyphicon {
      color: white; 
+     font-size: 20px;
+     margin-right: 20px;
+ }
+
+ .glyphicon:hover {
+     color: goldenrod;
+     font-size: 25px;
  }
 
  img {

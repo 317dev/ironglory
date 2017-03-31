@@ -96,7 +96,6 @@ class Layout extends React.Component {
                                     <button type="button" className="btn btn-default" id="searchButton">Search</button>
                                 </div>
                             </li>
-                            <li>login</li>
                             <li className="glyphicon glyphicon-shopping-cart" onClick={this.cart}></li>
                         </ul>
                     </div>
