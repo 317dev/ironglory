@@ -6,7 +6,7 @@ class Categories extends React.Component {
     constructor(props) {
         super(props)
 
-        this.getCategories = this.getCategories.bind(this)
+        
         this.getPatches = this.getPatches.bind(this)
         this.getPatch = this.getPatch.bind(this)
         this.filterProducts = this.filterProducts.bind(this)
@@ -29,11 +29,7 @@ class Categories extends React.Component {
         this.props.getPatches()
     }
 
-    // getCategories() {
-    //     fetch('/api/categories')
-    //     .then(res => res.json())
-    //     .then(res => this.setState({categories: res}))
-    // }
+
 
     getPatches() {
         fetch('/api/patches')
