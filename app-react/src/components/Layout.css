@@ -1,12 +1,12 @@
 .navbar {
-    background: black;
+    background: silver;
     border-radius: 0;
     color: white;
     padding: 10px; 
 }
 
 .footer {
-    background: black;
+    background: gray;
     border-radius: 0;
     color: white;
     padding-top: 35px;
