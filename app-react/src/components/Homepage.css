@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+}
+
+.background {
+    background: url("/img/iron-glory-background.jpg");
+    background-size: cover;
+    padding: 300px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    
+}

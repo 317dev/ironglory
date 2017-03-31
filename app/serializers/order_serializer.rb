@@ -1,4 +1,6 @@
 class OrderSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :token
+
   has_one :user
+  has_many :orderings
 end

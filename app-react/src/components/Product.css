@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+
+.btn {
+    margin-right: 20px;
+    background: darkslategray;
+    border: none;
+    color: white;
+}
+
+.productInfo {
+    background: goldenrod;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

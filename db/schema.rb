@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328010529) do
+ActiveRecord::Schema.define(version: 20170331133832) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(version: 20170328010529) do
     t.integer  "zip_code"
     t.integer  "user_id"
     t.integer  "order_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "addressings_id"
+    t.string   "addressings_type"
     t.index ["order_id"], name: "index_addresses_on_order_id", using: :btree
     t.index ["user_id"], name: "index_addresses_on_user_id", using: :btree
   end
@@ -40,14 +42,17 @@ ActiveRecord::Schema.define(version: 20170328010529) do
     t.integer  "patch_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "quantity"
     t.index ["order_id"], name: "index_orderings_on_order_id", using: :btree
     t.index ["patch_id"], name: "index_orderings_on_patch_id", using: :btree
   end
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "processed",  default: false
+    t.string   "token"
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
@@ -56,11 +61,14 @@ ActiveRecord::Schema.define(version: 20170328010529) do
     t.text     "description"
     t.string   "sku"
     t.integer  "price"
-    t.integer  "quantity"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.integer  "year_id"
     t.integer  "category_id"
+    t.boolean  "featured",        default: false
+    t.integer  "quantity"
+    t.string   "image"
+    t.boolean  "limited_edition", default: false
     t.index ["category_id"], name: "index_patches_on_category_id", using: :btree
     t.index ["year_id"], name: "index_patches_on_year_id", using: :btree
   end
@@ -71,12 +79,11 @@ ActiveRecord::Schema.define(version: 20170328010529) do
     t.string   "email"
     t.string   "phone_number"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.integer  "year_id"
-    t.integer  "category_id"
-    t.index ["category_id"], name: "index_users_on_category_id", using: :btree
-    t.index ["year_id"], name: "index_users_on_year_id", using: :btree
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.boolean  "admin",           default: false
+    t.string   "token"
+    t.string   "username"
   end
 
   create_table "years", force: :cascade do |t|
@@ -92,6 +99,4 @@ ActiveRecord::Schema.define(version: 20170328010529) do
   add_foreign_key "orders", "users"
   add_foreign_key "patches", "categories"
   add_foreign_key "patches", "years"
-  add_foreign_key "users", "categories"
-  add_foreign_key "users", "years"
 end

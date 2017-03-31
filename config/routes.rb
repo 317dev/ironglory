@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
-  resources :patches
-  resources :orders
-  resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  scope :api do
+
+    resources :patches
+
+    resources :orders do
+      resources :orderings
+    end
+
+    resources :users do
+      resources :orders do
+        resources :orderings
+      end
+    end
+    
+    post '/login' => 'sessions#create'
+  end
 end

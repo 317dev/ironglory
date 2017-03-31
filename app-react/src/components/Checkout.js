@@ -1,8 +1,17 @@
-import React, { Component } from 'react';
-//import style from '../css/checkout.css'
+import React from 'react'
+import './Checkout.css'
 
-class Checkout extends Component {
-  render() {
+class Checkout extends React.Component {
+    // componentWillMount() {
+    //     this.props.getCart()
+    // }
+    
+    render() {
+
+        // if (cart.length === 0) {
+        //     cart = <p>There are no items in your cart. <a href="/">Return to the home page.</a></p>
+        // }
+
     return <div>
             <div className="row">
             <div className="col-sm-7" id="checkoutForm">
