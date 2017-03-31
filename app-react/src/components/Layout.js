@@ -7,13 +7,13 @@ class Layout extends React.Component {
         super(props)
 
         // Custom methods
-        this.getCategories = this.getCategories.bind(this)
+        // this.getCategories = this.getCategories.bind(this)
         this.getProducts = this.getProducts.bind(this)
         this.getProduct = this.getProduct.bind(this)
-        this.filterProducts = this.filterProducts.bind(this)
-        this.getCart = this.getCart.bind(this)
-        this.addToCart = this.addToCart.bind(this)
-        this.checkout = this.checkout.bind(this)
+        // this.filterProducts = this.filterProducts.bind(this)
+        // this.getCart = this.getCart.bind(this)
+        // this.addToCart = this.addToCart.bind(this)
+        // this.checkout = this.checkout.bind(this)
 
     //     Master state
     //     this.state = {
@@ -24,7 +24,7 @@ class Layout extends React.Component {
     //         cart: [],
     //         message: ''
     //     }
-    // }
+    }
 
     // getCategories() {
     //     fetch('/api/categories')
@@ -85,21 +85,21 @@ class Layout extends React.Component {
  render() {
 
         const routeComponent = React.cloneElement(this.props.children, {
-            ...this.state,
-            getCategories: this.getCategories,
+            // ...this.state,
+            // getCategories: this.getCategories,
             getProducts: this.getProducts,
             getProduct: this.getProduct,
-            filterProducts: this.filterProducts,
-            getCart: this.getCart,
-            addToCart: this.addToCart,
-            checkout: this.checkout,
+            // filterProducts: this.filterProducts,
+            // getCart: this.getCart,
+            // addToCart: this.addToCart,
+            // checkout: this.checkout,
         })
 
-        let message = this.state.message ? <p className="alert alert-success">{this.state.message}</p> : ''
+        // let message = this.state.message ? <p className="alert alert-success">{this.state.message}</p> : ''
 
-        if (message) {
-            setTimeout(() => this.setState({message: ''}), 2000)
-        }
+        // if (message) {
+        //     setTimeout(() => this.setState({message: ''}), 2000)
+        // }
 
         // // Show a My Cart button if we're not on the checkout page, otherwise show a Checkout button
         // let checkoutButton = location.pathname === '/checkout' ? <a className="btn btn-success" onClick={this.checkout}>Checkout</a> : <a className="btn btn-success" onClick={() => browserHistory.push('/checkout')}>My Cart</a>
