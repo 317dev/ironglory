@@ -1,10 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react'
+import { browserHistory } from 'react-router'
 
-class Homepage extends Component {
+import './Homepage.css'
+
+class Homepage extends React.Component {
+    // componentWillMount() {
+    //     this.props.getCategories()
+
   render() {
-    return (
-      <h1>Hello Homepage</h1>
-    );
+    return <div>
+       <div class="row background">
+            <div class="">
+                 <img src="./img/iron-glory-logo-inverted.png"/>
+            </div>
+        </div>
+    </div>
   }
 }
 

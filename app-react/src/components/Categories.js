@@ -1,11 +1,16 @@
-import React, { Component } from 'react';
-import Product from './Product'
+import React from 'react'
+import { browserHistory } from 'react-router'
 
-class Categories extends Component {
+class Categories extends React.Component {
+    // Get products
+    // componentWillMount() {
+    //     this.props.getProducts()
+    // }
+
   render() {
     return (
       <h1>Hello Categories</h1>
-    );
+    )
   }
 }
 
