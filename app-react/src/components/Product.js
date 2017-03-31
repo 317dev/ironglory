@@ -15,19 +15,22 @@ class Product extends React.Component {
   render() {
 console.log(this.props.patch)
     return <div>
-      <div className="col-sm-6 col-md-4">
+      <div className="col-sm-6 col-sm-4">
         <div className="thumbnail">
           <img src={this.props.patch.image} alt={this.props.patch.description} />
           <div className="caption">
             <h3>{this.props.name}</h3>
             <div className="row productInfo">
-                <div className="col-sm-6">
+                <div className="col-sm-4">
                     <p><strong>Qty:</strong> {this.props.patch.quantity}</p>
                 </div>
-                <div className="col-sm-6 pull-right">
+                <div className="col-sm-4 ">
                     <p><strong>Price:</strong> {this.props.patch.price}</p>
                 </div>
-                <a href="#####" className="btn btn-success pull-right" role="button">+</a>
+                <div className="col-sm-4 pull-right">
+                  <a href="#####" className="btn btn-success pull-right" role="button">+</a>
+                </div>
+                
             </div>
           </div>
         </div>

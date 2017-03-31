@@ -7,7 +7,14 @@ img {
 
 .btn {
     margin-right: 20px;
-    background: darkslategray;
+    background: gray;
+    border: none;
+    color: white;
+}
+
+.btn:hover,
+.btn:active {
+    background: silver;
     border: none;
     color: white;
 }
