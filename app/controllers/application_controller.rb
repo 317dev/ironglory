@@ -16,5 +16,15 @@ class ApplicationController < ActionController::Base
   end
 
   def current_order
+    return @order if @order
+    if params[:order_token]
+      @order = Order.find_by(token: params[:order_token])
+    elsif current_user && current_user.order
+      @order = current_user.order
+    elsif current_user
+      @order = current_user.order.create!
+    else
+      @order = Order.create!
+    end
   end
 end
